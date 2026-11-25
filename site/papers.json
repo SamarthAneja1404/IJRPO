@@ -1,0 +1,92 @@
+{
+  "journal": {
+    "volume": 1,
+    "issue": 1,
+    "month_year": "November 2026",
+    "year": 2026
+  },
+  "papers": [
+    {
+      "key": "pk",
+      "id": "IJRPO-V1I1-001",
+      "slug": "parkinsons-disease-screening-sustained-phonation",
+      "live": true,
+      "type": "Research Paper",
+      "title": "Parkinson's Disease Screening from Sustained Phonation: A Web-Deployable Agreement Ensemble of Praat Acoustic Features and Vision-Transformer Spectrograms",
+      "title_tex": "Parkinson's Disease Screening from Sustained Phonation:\\\\A Web-Deployable Agreement Ensemble of Praat Acoustic\\\\Features and Vision-Transformer Spectrograms",
+      "authors": [
+        "Samarth Aneja",
+        "Ritesh Chandel"
+      ],
+      "affiliation_lines": [
+        "Department of Artificial Intelligence and Data Science",
+        "Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India",
+        "samarthaneja1401@gmail.com"
+      ],
+      "affiliations": [
+        "Department of Artificial Intelligence and Data Science, Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India"
+      ],
+      "email": "samarthaneja1401@gmail.com",
+      "abstract": "Vocal impairment is among the earliest and most frequent signs of Parkinson's disease (PD), and a sustained vowel can be captured with nothing more than a microphone or a telephone. This paper presents a web-deployable screening system that classifies a short sustained \"aah\" as likely-PD or likely-healthy and returns a confidence probability. Two complementary classifiers are combined: a Random Forest trained on Praat-derived jitter, shimmer, harmonics-to-noise ratio (HNR) and pitch measures extracted through the Parselmouth binding, and a Vision Transformer (ViT-B/16, ImageNet-pretrained) whose two-class head is fine-tuned on 224×224 mel-spectrograms of the same audio. The ensemble averages the two probabilities but returns a positive label only when both models agree, a conservative rule intended to reduce false positives. The system is exposed through a Flask application with a browser upload flow (WAV, MP3, WMA) and a Twilio phone-in flow that records five seconds of phonation, and is packaged with gunicorn, Docker and a Render blueprint. To characterise the feature front-end, we report reproducible Parselmouth measurements on controlled synthetic vowels: measured local jitter rises monotonically from 0.000% to 2.287% as injected period perturbation rises from 0% to 2%, measured local shimmer tracks injected amplitude perturbation from 0.002% to 18.984%, and mean HNR falls from 27.3 dB to 1.3 dB as additive noise increases. We also give an analytical account of the agreement rule under conditional independence. Classifier accuracy on held-out clinical data is not claimed; the paper defines the evaluation protocol required to establish it. The tool is a screening aid, not a diagnostic device.",
+      "keywords": [
+        "Parkinson's disease",
+        "dysphonia",
+        "speech biomarkers",
+        "Praat",
+        "jitter",
+        "shimmer",
+        "Random Forest",
+        "Vision Transformer",
+        "ensemble learning",
+        "telehealth"
+      ],
+      "pages": "1-4",
+      "published": "25 November 2026",
+      "pdf": "pdf/IJRPO-V1I1-001.pdf",
+      "authors_tex": "Samarth Aneja$^{1}$, \\ Ritesh Chandel$^{2}$",
+      "affiliation_lines_tex": [
+        "$^{1}$Student, B.Tech (AI \\& DS), \\ $^{2}$Assistant Professor, Department of Artificial Intelligence and Data Science",
+        "Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India",
+        "samarthaneja1401@gmail.com"
+      ]
+    },
+    {
+      "key": "vo",
+      "id": "IJRPO-V1I1-002",
+      "slug": "ventureos-multi-agent-startup-idea-validation",
+      "live": true,
+      "type": "Research Paper",
+      "title": "VentureOS: A Retrieval-Grounded Multi-Agent System for Stage-Aware Startup Idea Validation",
+      "title_tex": "VentureOS: A Retrieval-Grounded Multi-Agent System\\\\for Stage-Aware Startup Idea Validation",
+      "authors": [
+        "Yash Sharma",
+        "Ritesh Chandel"
+      ],
+      "affiliation_lines": [
+        "Department of Artificial Intelligence and Data Science",
+        "Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India"
+      ],
+      "affiliations": [
+        "Department of Artificial Intelligence and Data Science, Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India"
+      ],
+      "email": "",
+      "abstract": "Early-stage founders, particularly students and first-time builders, often lack access to analysts who can validate an idea against real market, financial and regulatory evidence. Large language models (LLMs) can draft such analyses, but a single prompt tends to produce fluent yet ungrounded output that does not acknowledge the limits of what it knows. This paper presents VentureOS, a multi-agent system that decomposes startup validation into twelve specialised agents orchestrated as a directed acyclic graph (DAG). A Research Agent retrieves live web evidence through a search API and injects it as shared context into downstream Market, Feasibility and Risk agents, following the retrieval-augmented generation (RAG) paradigm; a Synthesizer then fuses their outputs into an overall venture score. Limits are made explicit through a ten-factor weighted risk model with three actionable bands, geography-calibrated financial estimates, and stage-aware guardrails that change the advice for a student versus a funded startup. Results stream to a Next.js client over Server-Sent Events (SSE), with session state in Redis and history in MongoDB.",
+      "keywords": [
+        "retrieval-augmented generation",
+        "multi-agent systems",
+        "large language models",
+        "startup validation",
+        "risk scoring",
+        "decision support"
+      ],
+      "pages": "5-7",
+      "published": "25 November 2026",
+      "pdf": "pdf/IJRPO-V1I1-002.pdf",
+      "authors_tex": "Yash Sharma$^{1}$, \\ Ritesh Chandel$^{2}$",
+      "affiliation_lines_tex": [
+        "$^{1}$Student, B.Tech (AI \\& DS), \\ $^{2}$Assistant Professor, Department of Artificial Intelligence and Data Science",
+        "Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India"
+      ]
+    }
+  ]
+}

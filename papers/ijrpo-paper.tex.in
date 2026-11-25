@@ -1,0 +1,85 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage[a4paper,top=0.95in,bottom=0.85in,left=0.7in,right=0.7in,columnsep=0.24in,headheight=34pt,headsep=14pt,footskip=26pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{array,tabularx,booktabs}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage[font=footnotesize,labelsep=period]{caption}
+\usepackage{enumitem}
+\usepackage[hyphens]{url}\urlstyle{same}
+\usepackage{microtype}
+\usepackage{stfloats}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+
+\definecolor{ijnavy}{HTML}{002651}
+\definecolor{ijblue}{HTML}{1F86D2}
+\definecolor{ijsky}{HTML}{DDF1FE}
+
+\hypersetup{pdftitle={@@TITLE_PLAIN@@},pdfauthor={@@AUTHORS_PLAIN@@},pdfsubject={International Journal Research Paper Organization (IJRPO), Vol. 1, Issue 1, @@MONTH@@},pdfkeywords={@@KEYWORDS_PLAIN@@}}
+
+% ---- IEEE-like section style ----
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\Alph{subsection}}
+\titleformat{\section}{\centering\normalsize\scshape}{\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+\titleformat{\subsection}{\normalsize\itshape}{\thesubsection.}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+\captionsetup[table]{labelfont=sc,textfont=sc,name=TABLE,labelformat=simple,justification=centering}
+\renewcommand\thetable{\Roman{table}}
+\captionsetup[figure]{name=Fig.,justification=justified,singlelinecheck=true}
+\setlength{\parindent}{1em}
+\setlist{nosep,leftmargin=1.4em}
+
+% ---- journal header / footer ----
+\newcommand{\jhead}{%
+  \begin{minipage}[b]{0.2\textwidth}\includegraphics[height=30pt]{figs/logo.png}\end{minipage}\hfill
+  \begin{minipage}[b]{0.78\textwidth}\raggedleft\footnotesize
+    {\color{ijnavy}\textbf{International Journal Research Paper Organization (IJRPO)}}\\[1pt]
+    {\color{ijnavy}ISSN: 2356-1068 (Online) \,$\cdot$\, Vol.~1, Issue~1, @@MONTH@@, pp.~\thefirstpage--\pageref*{LastPage}}\\[1pt]
+    {\color{ijblue}\url{www.ijrpo.in}}
+  \end{minipage}}
+\newcommand{\thefirstpage}{@@FIRSTPAGE@@}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\jhead}
+\renewcommand{\headrule}{{\color{ijnavy}\hrule height 0.8pt}}
+\fancyfoot[L]{\scriptsize\color{ijnavy}@@SHORTCITE@@}
+\fancyfoot[R]{\small\color{ijnavy}\thepage}
+\renewcommand{\footrule}{{\color{ijblue}\hrule height 0.4pt}\vspace{2pt}}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancypagestyle{plain}{}
+
+\begin{document}
+\setcounter{page}{@@FIRSTPAGE@@}
+\twocolumn[{%
+\begin{center}
+\vspace*{2pt}
+{\color{ijblue}\footnotesize\scshape @@TYPE@@ \,$\cdot$\, Paper ID: @@PAPERID@@}\\[6pt]
+{\fontsize{19}{23}\selectfont @@TITLE@@\par}
+\vspace{9pt}
+{\normalsize @@AUTHORS@@\par}
+\vspace{3pt}
+{\footnotesize\itshape @@AFFIL@@\par}
+\vspace{7pt}
+{\setlength{\fboxsep}{5pt}\colorbox{ijsky}{\parbox{0.96\textwidth}{\centering\footnotesize\color{ijnavy}
+\textbf{Published:} @@PUBDATE@@ \quad$|$\quad \textbf{Issue:} Vol.~1, Issue~1 (@@MONTH@@) \quad$|$\quad \textbf{Pages:} \thefirstpage--\pageref*{LastPage} \quad$|$\quad \textbf{Licence:} CC BY 4.0 \quad$|$\quad \textbf{Article page:} \url{@@URL@@}}}}
+\end{center}
+\vspace{10pt}
+}]
+
+\noindent\textbf{\textit{Abstract}---@@ABSTRACT@@}
+
+\smallskip
+\noindent\textbf{\textit{Keywords}---@@KEYWORDS@@}
+
+@@BODY@@
+
+\vspace{6pt}
+{\footnotesize\setlength{\fboxsep}{5pt}\noindent\colorbox{ijsky}{\parbox{\dimexpr\columnwidth-2\fboxsep}{\color{ijnavy}
+\textbf{How to cite:} @@CITE@@\\[2pt]
+\textbf{Copyright:} \copyright\ 2026 The Author(s). Published by the International Journal Research Paper Organization (IJRPO) under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence.}}}
+\end{document}

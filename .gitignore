@@ -1,0 +1,7 @@
+papers/*.aux
+papers/*.log
+papers/*.out
+papers/*.pdf
+papers/IJRPO-*.tex
+__pycache__/
+.DS_Store
