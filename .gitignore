@@ -5,3 +5,4 @@ papers/*.pdf
 papers/IJRPO-*.tex
 __pycache__/
 .DS_Store
+papers/*.png
