@@ -48,7 +48,8 @@
         "$^{1}$Student, B.Tech (AI \\& DS), \\ $^{2}$Assistant Professor, Department of Artificial Intelligence and Data Science",
         "Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India",
         "samarthaneja1401@gmail.com"
-      ]
+      ],
+      "online_url": "https://ijrpo.netlify.app/parkinsons-disease-screening-sustained-phonation"
     },
     {
       "key": "vo",
@@ -86,7 +87,8 @@
       "affiliation_lines_tex": [
         "$^{1}$Student, B.Tech (AI \\& DS), \\ $^{2}$Assistant Professor, Department of Artificial Intelligence and Data Science",
         "Dr. Akhilesh Das Gupta Institute of Professional Studies (Affiliated to Guru Gobind Singh Indraprastha University), Delhi, India"
-      ]
+      ],
+      "online_url": "https://ijrpo.netlify.app/ventureos-multi-agent-startup-idea-validation"
     }
   ]
 }

@@ -24,7 +24,7 @@ for p in data["papers"]:
     first = page
     # two passes: first to learn page count, then final with correct LastPage
     cite_short = f'{authors}, IJRPO, Vol. {J["volume"]}, Issue {J["issue"]}, {J["month_year"]}'
-    url = f'https://ijrpo.in/{p["slug"]}.html'
+    url = p.get('online_url') or f'https://ijrpo.in/{p["slug"]}.html'
     t = (tmpl.replace("@@TITLE_PLAIN@@", p["title"]).replace("@@AUTHORS_PLAIN@@", authors)
          .replace("@@KEYWORDS_PLAIN@@", ", ".join(p["keywords"]))
          .replace("@@MONTH@@", J["month_year"]).replace("@@FIRSTPAGE@@", str(first))
@@ -33,7 +33,7 @@ for p in data["papers"]:
          .replace("@@TITLE@@", p["title_tex"])
          .replace("@@AUTHORS@@", p.get("authors_tex") or tex(authors))
          .replace("@@AFFIL@@", r"\\".join(p["affiliation_lines_tex"]) if p.get("affiliation_lines_tex") else r"\\".join(tex(a) for a in p["affiliation_lines"]))
-         .replace("@@PUBDATE@@", p["published"]).replace("@@URL@@", url)
+         .replace("@@PUBDATE@@", p["published"]).replace("@@URL@@", url).replace("@@KEY@@", p["key"])
          .replace("@@ABSTRACT@@", tex(p["abstract"]))
          .replace("@@KEYWORDS@@", tex("; ".join(p["keywords"])))
          .replace("@@BODY@@", open(os.path.join(HERE, p["key"] + "_body.tex"), encoding="utf-8").read()))

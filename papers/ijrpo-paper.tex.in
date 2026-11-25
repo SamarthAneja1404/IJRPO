@@ -65,8 +65,15 @@
 \vspace{3pt}
 {\footnotesize\itshape @@AFFIL@@\par}
 \vspace{7pt}
-{\setlength{\fboxsep}{5pt}\colorbox{ijsky}{\parbox{0.96\textwidth}{\centering\footnotesize\color{ijnavy}
-\textbf{Published:} @@PUBDATE@@ \quad$|$\quad \textbf{Issue:} Vol.~1, Issue~1 (@@MONTH@@) \quad$|$\quad \textbf{Pages:} \thefirstpage--\pageref*{LastPage} \quad$|$\quad \textbf{Licence:} CC BY 4.0 \quad$|$\quad \textbf{Article page:} \url{@@URL@@}}}}
+{\setlength{\fboxsep}{6pt}\colorbox{ijsky}{\begin{minipage}{0.955\textwidth}\color{ijnavy}\footnotesize
+\begin{minipage}[c]{0.83\textwidth}
+\textbf{Published:} @@PUBDATE@@ \quad$|$\quad \textbf{Issue:} Vol.~1, Issue~1 (@@MONTH@@) \quad$|$\quad \textbf{Pages:} \thefirstpage--\pageref*{LastPage} \quad$|$\quad \textbf{Licence:} CC BY 4.0\\[4pt]
+\textbf{Read online:} \href{@@URL@@}{@@URL@@}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.15\textwidth}\centering
+\href{@@URL@@}{\includegraphics[width=52pt]{figs/qr_@@KEY@@.png}}\\[1pt]{\scriptsize Scan to view online}
+\end{minipage}
+\end{minipage}}}
 \end{center}
 \vspace{10pt}
 }]
